@@ -1,15 +1,4 @@
-<h1>Parcels</h1>
+<h4>Parcel Name: <%= @parcel.name %></h4>
 
-<h3>Parcels awaiting shipment</h3>
-
-<% if @parcels.any? %>
-  <ul>
-    <% @parcels.each do |parcel| %>
-      <li> <%= parcel.name %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are no parcels to display. </p>
-<% end %>
-
-<a href="/parcels/new">Add a new parcel</a>
+<p><a href="/parcels/<%= @parcel.id %>/edit">Edit parcel</a></p>
+<a href="/parcels">Return to parcel list</a>

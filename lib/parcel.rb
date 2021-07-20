@@ -1,7 +1,7 @@
 require 'pry'
 
 class Parcel
-  attr_accessor(:width, :length, :height, :weight)
+  attr_accessor(:name, :width, :length, :height, :weight, :id)
 
   @@parcels = {}
   @@total_rows = 0

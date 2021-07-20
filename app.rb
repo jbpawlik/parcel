@@ -11,8 +11,8 @@ get '/' do
   height = params[:parcel_height]
   weight = params[:parcel_weight]
   parcel = Parcel.new('name', 'width', 'length', 'height', 'weight', 0)
-  parcel.save
-  @parcels = Parcel.all
+  # parcel.save()
+  @parcels = Parcel.all()
   erb(:parcels)
 end
 
@@ -30,13 +30,14 @@ get('/parcels/:id/edit') do
   erb(:edit_parcel)
 end
 
-post '/parcels' do
+post('/parcels') do
   name = params[:parcel_name]
   width = params[:parcel_width]
   length = params[:parcel_length]
   height = params[:parcel_height]
   weight = params[:parcel_weight]
-  parcel = Parcel.new
+  id = params[:parcel_id]
+  parcel = Parcel.new(name, width, length, height, weight, id)
   parcel.save
   @parcels = Parcel.all
   erb(:parcels)

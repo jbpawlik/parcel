@@ -6,4 +6,5 @@ describe 'parcel' do
     parcel = Parcel.new("width", "length", "height", "weight")
     expect(parcel.width).to(eq('width'))
   end
+
 end
